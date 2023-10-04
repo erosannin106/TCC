@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import {ScrollView, FlatList} from 'react-native';
+import style from '../style';
 
 export default function TelaProdutos(props) {
    
@@ -35,7 +36,8 @@ export default function TelaProdutos(props) {
     
         return (
             <ScrollView>
-                <View style={estilo.container2}>
+                <View style={style.container2}>
+                    <Text>dfgd</Text>
                     <FlatList
                         data={produtos}
                         renderItem={({item})=>
@@ -48,6 +50,7 @@ export default function TelaProdutos(props) {
                         keyExtractor={item => item.id}
                     />
                 </View>
+
             </ScrollView>
         );
     }
